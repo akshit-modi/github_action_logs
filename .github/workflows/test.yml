@@ -1,0 +1,27 @@
+name: Test CI
+on:
+  workflow_dispatch:
+  
+permissions:
+  id-token: write
+  contents: read
+  actions: read
+  
+jobs: 
+  CI:
+    name: "Testing job"
+    runs-on: 'ubuntu-latest'
+    step:
+      - run: |
+          echo "Github logs"
+          echo "Job ID: "
+          echo ${{ github.job_id }}
+          echo "Run ID:"
+          echo ${{ github.run_id }}
+          
+      - run: |
+          echo "This is a second step"
+          echo "It will create a separate block of code in logs."
+          echo "Thanks for checking..."
+          
+    
