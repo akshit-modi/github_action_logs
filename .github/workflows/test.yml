@@ -11,7 +11,7 @@ jobs:
   CI:
     name: "Testing job"
     runs-on: 'ubuntu-latest'
-    step:
+    steps:
       - run: |
           echo "Github logs"
           echo "Job ID: "
